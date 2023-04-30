@@ -6,13 +6,14 @@ export default eventHandler(async event => {
     const params = {}
 
     for (const key in query) {
-      if (key !== 'url') {
+      if (key !== 'url' && key !== 'method') {
         params[key] = query[key]
       }
     }
 
     const res = await axios({
-      url: query.url.toString(),
+      url: query.url?.toString(),
+      method: query.method?.toString() || 'get',
       params
     })
 
