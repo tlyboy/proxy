@@ -1,7 +1,5 @@
 export default eventHandler(async (event) => {
-  const body = await readBody(event)
-
-  const { request, opts } = JSON.parse(body)
+  const { request, opts } = await readBody(event)
 
   const res = await $fetch(request, opts)
 
