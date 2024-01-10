@@ -78,3 +78,23 @@ const res = await ofetch('https://proxy.tlyboy.dev/', {
 
 console.log(res)
 ```
+
+### docker
+
+```sh
+docker run -d --name proxy -p 3000:3000 tlyboy/proxy
+```
+
+### docker-compose
+
+```yml
+version: '3'
+
+services:
+  proxy:
+    image: tlyboy/proxy
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - PORT=3000
+```
