@@ -87,9 +87,7 @@ docker run -d --name proxy -p 3000:3000 tlyboy/proxy
 
 ### docker compose
 
-```yml
-version: '3'
-
+```yaml
 services:
   proxy:
     image: tlyboy/proxy
