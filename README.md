@@ -92,7 +92,9 @@ services:
   proxy:
     image: tlyboy/proxy
     restart: unless-stopped
-    network_mode: host
+    # network_mode: host
+    ports:
+      - '3000:3000'
     environment:
-      - PORT=3000
+    # - PORT=3000
 ```
