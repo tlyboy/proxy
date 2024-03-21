@@ -1,6 +1,7 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
+    "antfu.goto-alias",
+    "bradlc.vscode-tailwindcss",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "ms-azuretools.vscode-docker"
