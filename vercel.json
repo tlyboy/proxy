@@ -1,0 +1,43 @@
+{
+  "headers": [
+    {
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+        }
+      ],
+      "source": "/(.*)"
+    }
+  ],
+  "rewrites": [
+    {
+      "destination": "https://:match/:url*",
+      "source": "/https/:match/:url*"
+    },
+    {
+      "destination": "https://:match/:url*/",
+      "source": "/https/:match/:url*/"
+    },
+    {
+      "destination": "http://:match/:url*",
+      "source": "/http/:match/:url*"
+    },
+    {
+      "destination": "http://:match/:url*/",
+      "source": "/http/:match/:url*/"
+    }
+  ]
+}
